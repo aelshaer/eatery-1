@@ -59,9 +59,11 @@
 		C096409B1A081E8C00F3841F /* EatNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09640991A081E8C00F3841F /* EatNowTableViewCell.swift */; };
 		C0A171B91A06FD480005BC03 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A171B81A06FD480005BC03 /* SwiftyJSON.swift */; };
 		C0C1D0F31A072D09004B31D7 /* NSError+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C1D0F21A072D08004B31D7 /* NSError+Alert.swift */; };
-		E28F39D81A2FFC140060AC19 /* EatNowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28F39D71A2FFC140060AC19 /* EatNowTableViewCell.xib */; };
-		E2BB8B2D1A1943380090FD0D /* EatNowTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BB8B2C1A1943380090FD0D /* EatNowTableView.xib */; };
 		C0ECB46C1A1D83F500E5C708 /* GroupMeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ECB46B1A1D83F500E5C708 /* GroupMeManager.swift */; };
+		E28F39D81A2FFC140060AC19 /* EatNowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28F39D71A2FFC140060AC19 /* EatNowTableViewCell.xib */; };
+		E29861501A33975300CF9E9A /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = E298614F1A33975300CF9E9A /* blank.png */; };
+		E29861521A339A3F00CF9E9A /* customblue.png in Resources */ = {isa = PBXBuildFile; fileRef = E29861511A339A3E00CF9E9A /* customblue.png */; };
+		E2BB8B2D1A1943380090FD0D /* EatNowTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BB8B2C1A1943380090FD0D /* EatNowTableView.xib */; };
 		E2C2BF081A1074730027C86C /* SortByTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2BF071A1074730027C86C /* SortByTableViewController.swift */; };
 		E2C2BF0B1A1074800027C86C /* SortByTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C2BF0A1A1074800027C86C /* SortByTableViewController.xib */; };
 		FA89C0921A10057100725E2C /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C0911A10057100725E2C /* GroupsTableViewCell.swift */; };
@@ -174,9 +176,11 @@
 		C09640991A081E8C00F3841F /* EatNowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatNowTableViewCell.swift; sourceTree = "<group>"; };
 		C0A171B81A06FD480005BC03 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		C0C1D0F21A072D08004B31D7 /* NSError+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+Alert.swift"; sourceTree = "<group>"; };
-		E28F39D71A2FFC140060AC19 /* EatNowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatNowTableViewCell.xib; sourceTree = "<group>"; };
-		E2BB8B2C1A1943380090FD0D /* EatNowTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatNowTableView.xib; sourceTree = "<group>"; };
 		C0ECB46B1A1D83F500E5C708 /* GroupMeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupMeManager.swift; sourceTree = "<group>"; };
+		E28F39D71A2FFC140060AC19 /* EatNowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatNowTableViewCell.xib; sourceTree = "<group>"; };
+		E298614F1A33975300CF9E9A /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank.png; sourceTree = "<group>"; };
+		E29861511A339A3E00CF9E9A /* customblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customblue.png; sourceTree = "<group>"; };
+		E2BB8B2C1A1943380090FD0D /* EatNowTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatNowTableView.xib; sourceTree = "<group>"; };
 		E2C2BF071A1074730027C86C /* SortByTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortByTableViewController.swift; sourceTree = "<group>"; };
 		E2C2BF0A1A1074800027C86C /* SortByTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SortByTableViewController.xib; sourceTree = "<group>"; };
 		FA89C0911A10057100725E2C /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupsTableViewCell.swift; path = src/views/GroupsTableViewCell.swift; sourceTree = "<group>"; };
@@ -439,6 +443,8 @@
 				956125EF1A2D9B9400ACECE1 /* DetailViewController.xib */,
 				956125F61A2D9C4200ACECE1 /* Detail Info */,
 				6DC708441A0FDA63002F56A0 /* appel.jpg */,
+				E298614F1A33975300CF9E9A /* blank.png */,
+				E29861511A339A3E00CF9E9A /* customblue.png */,
 				C096408E1A08191900F3841F /* EatNowTableViewController.swift */,
 				E2BB8B2C1A1943380090FD0D /* EatNowTableView.xib */,
 				6DC708461A100AB3002F56A0 /* EatNowDetailViewController.swift */,
@@ -614,9 +620,8 @@
 				E28F39D81A2FFC140060AC19 /* EatNowTableViewCell.xib in Resources */,
 				C033B3FE1A0AB7FD000EFB98 /* ProfileViewController.xib in Resources */,
 				6DC708451A0FDA63002F56A0 /* appel.jpg in Resources */,
+				E29861521A339A3F00CF9E9A /* customblue.png in Resources */,
 				C007CACA19E1BEAC00E3BD46 /* Main.storyboard in Resources */,
-				C096409C1A081E8C00F3841F /* EatNowTableViewCell.xib in Resources */,
-				6DC708491A100AB3002F56A0 /* EatNowDetailViewController.xib in Resources */,
 				FAF8B1571A2FFA4500E1E56E /* FriendsListTableViewCell.xib in Resources */,
 				C06149271A0C067C00AB4DEF /* SignInViewController.xib in Resources */,
 				956125F11A2D9B9400ACECE1 /* DetailViewController.xib in Resources */,
@@ -624,6 +629,7 @@
 				C007CACF19E1BEAC00E3BD46 /* LaunchScreen.xib in Resources */,
 				E2BB8B2D1A1943380090FD0D /* EatNowTableView.xib in Resources */,
 				FA89C0971A10057600725E2C /* GroupsCollectionViewController.xib in Resources */,
+				E29861501A33975300CF9E9A /* blank.png in Resources */,
 				C007CACC19E1BEAC00E3BD46 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,10 +14,12 @@
         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hFG-0f-GGN">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <searchBar key="tableHeaderView" contentMode="redraw" id="9f6-rE-oq9">
+            <searchBar key="tableHeaderView" opaque="NO" contentMode="redraw" searchBarStyle="minimal" backgroundImage="blank.png" id="9f6-rE-oq9">
                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                <textInputTraits key="textInputTraits"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
                 <connections>
                     <outlet property="delegate" destination="-1" id="imQ-IZ-Qsn"/>
                 </connections>
@@ -38,4 +40,7 @@
             </connections>
         </searchDisplayController>
     </objects>
+    <resources>
+        <image name="blank.png" width="50" height="50"/>
+    </resources>
 </document>

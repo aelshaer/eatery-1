@@ -12,33 +12,66 @@ class EatNowTableViewController: UITableViewController, UISearchBarDelegate, UIS
     //var places = [DiningHall]()
     var filteredPlaces: [DiningHall] = []
     
+    var isSearching: Bool = false
+    
     override func viewDidLoad() {
         
 		super.viewDidLoad()
+        let customblue = UIColor(red:(77/255.0), green:(133/255.0), blue:(199/255.0), alpha:1.0);
+        tableView.backgroundColor = UIColor.whiteColor()
+        
+        //tableView.backgroundView?.backgroundColor = customblue
+      //  tableView.tableHeaderView?.backgroundColor = customblue
+        // searchDisplayController?.searchBar.barTintColor = UIColor.blueColor()
+   //   searchDisplayController?.searchResultsTableView.backgroundColor = customblue
+  
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        searchDisplayController?.searchBar.tintColor = customblue
+      
 
-        var nib = UINib(nibName: "EatNowTableViewCell", bundle: nil)        
+        var nib = UINib(nibName: "EatNowTableViewCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "eatNowCell")
         
         tableView.rowHeight = 95
         
-        let customblue = UIColor(red:(77/255.0), green:(133/255.0), blue:(199/255.0), alpha:1.0);
+        
 
         self.navigationController?.navigationBar.barTintColor = customblue
 
-        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "search:"), animated: true)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sort by", style: UIBarButtonItemStyle.Plain, target: self, action: "sortBy:")
+        //self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "search:"), animated: true)
+      //  self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sort by", style: UIBarButtonItemStyle.Plain, target: self, action: "sortBy:")
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
-        
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName: UIFont(name: "Avenir Next", size: 21)!,
+            NSForegroundColorAttributeName: UIColor.whiteColor()
+        ]
         
         DataManager.sharedInstance.loadTestData()
         print(DataManager.sharedInstance.diningHalls)
         
         self.tableView.reloadData()
+    }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        let origin: CGFloat = -1.0 * (navigationController!.navigationBar.frame.origin.y + navigationController!.navigationBar.frame.height)
+//        let origin: CGFloat = 0
+        if scrollView.contentOffset.y < origin {
+            if !isSearching {
+//                scrollView.setContentOffset(CGPoint(x: 0, y: origin), animated: false)
+            }
+        }
+
+    }
+    
+    func searchDisplayControllerWillBeginSearch(controller: UISearchDisplayController) {
+        isSearching = true
+    }
+    
+    func searchDisplayControllerWillEndSearch(controller: UISearchDisplayController) {
+        isSearching = false
     }
     
     // MARK: - Actions
@@ -98,8 +131,9 @@ class EatNowTableViewController: UITableViewController, UISearchBarDelegate, UIS
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
        
-    
         self.filterContentForSearchText(searchString)
+     //   self.searchDisplayController?.searchBar.backgroundColor = UIColor.whiteColor()
+     //   self.searchDisplayController?.searchBar.tintColor = UIColor.whiteColor()
         return true
     }
   
@@ -109,6 +143,7 @@ class EatNowTableViewController: UITableViewController, UISearchBarDelegate, UIS
 //        let detailViewController =  EatNowDetailViewController(nibName: "DetailViewController", bundle: nil)
         let detailViewController = DetailViewController()
         self.navigationController?.pushViewController(detailViewController, animated: true)
+        
         
     }
 }
